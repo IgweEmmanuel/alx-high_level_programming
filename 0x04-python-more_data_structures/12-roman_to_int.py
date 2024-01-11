@@ -1,62 +1,33 @@
 #!/usr/bin/python3
-
-
-def convert_roman(ch):
-    """
-    converts a roman numeral character into the respective integer
-    """
-    ret = -1
-    if ch == 'I':
-        ret = 1
-    elif ch == 'V':
-        ret = 5
-    elif ch == 'X':
-        ret = 10
-    elif ch == 'L':
-        ret = 50
-    elif ch == 'C':
-        ret = 100
-    elif ch == 'D':
-        ret = 500
-    elif ch == 'M':
-        ret = 1000
-    return ret
+# 12-roman_to_int.py
+# Emmanuel Igwe <emmanueligwe@.com>
 
 
 def roman_to_int(roman_string):
-    """
-    converts any string of roman numerals to decimal
-    """
-    cur_max = -1
-    cur = conv = 0
-    holder = []
+    """Converts a roman numeral to an integer."""
+    if (not isinstance(roman_string, str) or
+            roman_string is None):
+        return (0)
 
-    if roman_string is None or type(roman_string) is not str:
-        return 0
-    for c in roman_string:
-        cur = convert_roman(c)
-        if cur == -1:
-            return 0
-        if len(holder) == 0:
-            if cur == cur_max or cur_max == -1:
-                cur_max = cur
-                conv += cur
-            elif cur < cur_max:
-                holder.append(cur)
-            elif cur > cur_max:  # only happens if smaller is starting number
-                # for example: IIX, VXC
-                cur_max = cur
-                cur -= conv
-                conv = cur
+    roman_dict = {
+            "I": 1,
+            "V": 5,
+            "X": 10,
+            "L": 50,
+            "C": 100,
+            "D": 500,
+            "M": 1000
+    }
+    num = 0
+
+    for i in range(len(roman_string)):
+        if roman_dict.get(roman_string[i], 0) == 0:
+            return (0)
+
+        if (i != (len(roman_string) - 1) and
+                roman_dict[roman_string[i]] < roman_dict[roman_string[i + 1]]):
+                num += roman_dict[roman_string[i]] * -1
+
         else:
-            if cur > holder[-1]:
-                cur_max = cur
-                cur -= sum(holder)
-                conv += cur
-                holder.clear()
-            else:
-                holder.append(cur)
-
-    if len(holder) != 0:
-        conv += sum(holder)
-    return conv
+            num += roman_dict[roman_string[i]]
+    return (num)
