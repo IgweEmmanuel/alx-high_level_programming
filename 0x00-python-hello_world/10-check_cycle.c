@@ -23,3 +23,4 @@ int check_cycle(listint_t *list)
 	/* no loop detected */
 	return (0);
 }
+
