@@ -1,6 +1,7 @@
 #!/usr/bin/python3
-if __name__ == "__main__":
-    from sys import argv
+from sys import argv
+if __name__ != "__main__":
+    exit()
     x = len(argv) - 1
     if x < 1:
         print("{} argument:".format(x))
