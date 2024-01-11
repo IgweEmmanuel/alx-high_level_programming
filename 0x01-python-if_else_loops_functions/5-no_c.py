@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 # 5-no_c.py
-# Brennan D Baraban <375@holbertonschool.com>
+# Emmanuel Igwe <igweemmanuel@gmail.com>
 
 
 def no_c(my_string):
