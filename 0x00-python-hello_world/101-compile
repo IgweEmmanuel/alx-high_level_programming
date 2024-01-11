@@ -1,5 +1,5 @@
-#!/usr/bin/python3
-import sys
-
-sys.stderr.write('and that piece of art is useful - Dora Korpar, 2015-10-19\n')
-exit(1)
+#!/bin/bash
+echo "Compiling $PYFILE ..."
+python3 -c "import py_compile
+output = \"$PYFILE\" + \"c\"
+py_compile.compile(\"$PYFILE\", output)"
