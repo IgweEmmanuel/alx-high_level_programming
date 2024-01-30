@@ -3,29 +3,46 @@
 class Rectangle:
     """
         The code defines a rectangle
-        Args:
-            width - this is the width of rectangls
-            height - this is the height of rectangle
-        Return:
-            This returns int
+        Attributes:
+            width: this is the width of the rectangle
+            height: this is the height of the rectangle
     """
     def __init__(self, width=0, height=0):
-        self.width = width
-        self.height = height
+        """This initializes the instance and assigns attributes
+            Args:
+                width: this is the width of the rectangle
+                height: this is the height of the rectangle
+        """
+        self.__width = width
+        self.__height = height
 
-    def result(self):
-        if self.name != int(self.name):
-            try:
-                print()
-            except TyeError:
-                print()
-    def set_width(self, width):
-        self.width = width
-    def get_width(self):
-        return self.width
-    def set_height(self, height):
-        self.height = height
-    def get_height(self):
-        return self.height
+    def width(self, value):
+        self.__width = width
+        try:
+            if not type(self.__width) is int:
+                raise TypeError
+            if self.__width < 0:
+                raise ValueError
+        except TypeError:
+            print("width must be an integer")
+        except ValueError:
+            print("width must be >= 0"
+                    )
+    def width(self):
+        return self.__width
+
+    def height(self, value):
+        self.__height = height
+        try:
+            if not type(self.__height) is int:
+                raise TypeError
+            if self.__height < 0:
+                raise ValueError
+        except TypeError:
+            print("height must be an integer")
+        except ValueError:
+            print("height must be >= 0")
+    def height(self):
+        return self.__height
 
 
