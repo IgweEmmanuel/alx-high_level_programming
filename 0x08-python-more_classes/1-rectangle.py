@@ -3,7 +3,7 @@
 
 class Rectangle:
     """
-    The code defines a rectangle
+    This class defines a rectangle by: (based on 1-rectangle.py)
     Attributes:
         width: this is the width of the rectangle
         height: this is the height of the rectangle
