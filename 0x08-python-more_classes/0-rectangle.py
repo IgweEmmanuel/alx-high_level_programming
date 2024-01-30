@@ -1,10 +1,8 @@
 #!/usr/bin/python3
-"""This returns empty class"""
+"""Creating empty class"""
 
 class Rectangle:
-
     """
-        This class returns empty rectangle class
+        This is an empty class created
     """
-    
     pass
