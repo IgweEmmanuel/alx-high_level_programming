@@ -31,8 +31,8 @@ class Rectangle:
             print("width must be an integer")
         except ValueError:
             print("width must be >= 0")
-        finally:
-            self.__width = value
+        
+        self.__width = value
 
     @property
     def height(self):
@@ -49,5 +49,5 @@ class Rectangle:
             print("height must be an integer")
         except ValueError:
             print("height must be >= 0")
-        finally:
-            self.__height = value
+        
+        self.__height = value
