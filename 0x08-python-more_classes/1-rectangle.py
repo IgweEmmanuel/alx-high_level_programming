@@ -16,8 +16,10 @@ class Rectangle:
         self.__width = width
         self.__height = height
 
+    def width(self):
+        return self.__width
+
     def width(self, value):
-        self.__width = width
         try:
             if not type(self.__width) is int:
                 raise TypeError
@@ -26,13 +28,18 @@ class Rectangle:
         except TypeError:
             print("width must be an integer")
         except ValueError:
-            print("width must be >= 0"
-                    )
+            print("width must be >= 0")
+        else:
+            self.__width = width
+
     def width(self):
         return self.__width
 
+    
+    def height(self):
+        return self.__height
+
     def height(self, value):
-        self.__height = height
         try:
             if not type(self.__height) is int:
                 raise TypeError
@@ -42,7 +49,6 @@ class Rectangle:
             print("height must be an integer")
         except ValueError:
             print("height must be >= 0")
-    def height(self):
-        return self.__height
-
+        else:
+            self.__height = height
 
