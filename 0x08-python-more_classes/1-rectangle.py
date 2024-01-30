@@ -2,8 +2,7 @@
 """Real definition of a rectangle"""
 
 class Rectangle:
-    """
-        The code defines a rectangle
+    """The code defines a rectangle
         Attributes:
             width: this is the width of the rectangle
             height: this is the height of the rectangle
