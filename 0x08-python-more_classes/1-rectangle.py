@@ -13,14 +13,14 @@ class Rectangle:
                 width: this is the width of the rectangle
                 height: this is the height of the rectangle
         """
-        self.height = height
-        self.width = width
+        self.__height = height
+        self.__width = width
 
     @property
     def width(self):
         return self.__width
 
-    @width.setter
+    @width.setter 
     def width(self, value):
         try:
             if not type(value) is int:
