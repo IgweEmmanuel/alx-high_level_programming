@@ -13,27 +13,24 @@ class Rectangle:
                 width: this is the width of the rectangle
                 height: this is the height of the rectangle
         """
-        self.__width = width
-        self.__height = height
+        self.width(width)
+        self.height(height)
 
     def width(self):
         return self.__width
 
     def width(self, value):
         try:
-            if not type(self.__width) is int:
+            if not type(value) is int:
                 raise TypeError
-            if self.__width < 0:
+            elif value < 0:
                 raise ValueError
+            else:
+                self.__width = value
         except TypeError:
             print("width must be an integer")
         except ValueError:
             print("width must be >= 0")
-        else:
-            self.__width = width
-
-    def width(self):
-        return self.__width
 
     
     def height(self):
@@ -41,14 +38,14 @@ class Rectangle:
 
     def height(self, value):
         try:
-            if not type(self.__height) is int:
+            if not type(value) is int:
                 raise TypeError
-            if self.__height < 0:
+            elif value < 0:
                 raise ValueError
+            else:
+                self.__height = value
         except TypeError:
             print("height must be an integer")
         except ValueError:
             print("height must be >= 0")
-        else:
-            self.__height = height
 
