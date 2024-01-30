@@ -28,9 +28,9 @@ class Rectangle:
             if value < 0:
                 raise ValueError
         except TypeError:
-            print("width must be an integer")
+            return("width must be an integer")
         except ValueError:
-            print("width must be >= 0")
+            return("width must be >= 0")
         else:
             self.__width = value
 
@@ -46,8 +46,8 @@ class Rectangle:
             if value < 0:
                 raise ValueError
         except TypeError:
-            print("height must be an integer")
+            return("height must be an integer")
         except ValueError:
-            print("height must be >= 0")
+            return("height must be >= 0")
         else:
             self.__height = value
