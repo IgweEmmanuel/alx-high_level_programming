@@ -1,4 +1,5 @@
 #!/usr/bin/python3
-s1 = "Best School"
-s2 = s1
-print(s1 == s2)
+l1 = [1, 2, 3]
+l2 = l1
+l1.append(4)
+print(l2)
