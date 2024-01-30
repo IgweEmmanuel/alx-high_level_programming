@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""REal definition of a rectangle"""
+"""Real definition of a rectangle"""
 class Rectangle:
     """
         The code defines a rectangle
@@ -13,39 +13,23 @@ class Rectangle:
                 width: this is the width of the rectangle
                 height: this is the height of the rectangle
         """
-        self.width(width)
-        self.height(height)
+        self.__width = width
+        self.__height = height
 
     def width(self):
         return self.__width
 
     def width(self, value):
-        try:
-            if not type(value) is int:
-                raise TypeError
-            elif value < 0:
-                raise ValueError
-            else:
-                self.__width = value
-        except TypeError:
-            print("width must be an integer")
-        except ValueError:
-            print("width must be >= 0")
+        if not isinstance(value, int):
+            raise TypeError("width must be an integer")
+        if vlaue < 0:
+            raise ValueError("width must be >= 0")
 
-    
     def height(self):
         return self.__height
 
     def height(self, value):
-        try:
-            if not type(value) is int:
-                raise TypeError
-            elif value < 0:
-                raise ValueError
-            else:
-                self.__height = value
-        except TypeError:
-            print("height must be an integer")
-        except ValueError:
-            print("height must be >= 0")
-
+        if not isinstance(value, int):
+            raise TypeError("height must be an integer")
+        if value < 0:
+            raise ValueError("height must be an integer")
