@@ -12,9 +12,11 @@ class Rectangle:
             Args:
                 width: this is the width of the rectangle
                 height: this is the height of the rectangle
+            Return:
+                This returns the height and width of a rectangle
         """
-        self.__height = height
-        self.__width = width
+        self.height = height
+        self.width = width
 
     @property
     def width(self):
