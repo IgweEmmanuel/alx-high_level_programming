@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-"""This is to create a simple rectangle"""
 
 class Rectangle:
     """
@@ -8,5 +7,3 @@ class Rectangle:
             it returns empty class
     """
     pass
-
-
