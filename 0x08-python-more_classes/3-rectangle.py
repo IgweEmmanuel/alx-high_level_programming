@@ -30,7 +30,7 @@ class Rectangle:
             return ""
         else:
             return '\n'.join(['#' * int(self.__width)
-                            for _ in range(self.__height)])
+                             for _ in range(self.__height)])
 
     @property
     def width(self):
