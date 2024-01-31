@@ -26,7 +26,7 @@ class Rectangle:
             return 2 * (self.__height + self.__width)
 
     def __str__(self):
-        return '\n'.join(['%' * int(self.__width)
+        return '\n'.join(['#' * int(self.__width)
                          for _ in range(self.__height)])
 
     @property
