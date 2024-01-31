@@ -4,7 +4,7 @@
 
 class Rectangle:
     """"
-    This prints area and perimeter of a rectangle and with # as string representation
+    This prints # as string representation
     """
     def __init__(self, width=0, height=0):
         """This returns the various functions in the class
@@ -15,25 +15,26 @@ class Rectangle:
         """
         self.height = height
         self.width = width
-        self.perimeter
-        self.area
 
     def area(self):
         return(self.__height * self.__width)
 
     def perimeter(self):
-        return 2 * (self.__height + self.__width)
-    def perimeter(self, width, height):
-        if width == 0 or height == 0:
+        if self.__height == 0 or self.__width == 0:
             self.perimeter = 0
-        self.perimeter = (2 * (width + height))
+        else:
+            return 2 * (self.__height + self.__width)
+
+    def __str__(self):
+        return '\n'.join(['%' * int(self.__width)
+                         for _ in range(self.__height)])
 
     @property
     def width(self):
         return self.__width
 
     @width.setter
-    def width(self, value)
+    def width(self, value):
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
         if value < 0:
@@ -45,7 +46,7 @@ class Rectangle:
     @property
     def height(self):
         return self.__height
-    
+
     @height.setter
     def height(self, value):
         if not isinstance(value, int):
@@ -55,4 +56,3 @@ class Rectangle:
         if value == 0:
             return ""
         self.__height = value
-
