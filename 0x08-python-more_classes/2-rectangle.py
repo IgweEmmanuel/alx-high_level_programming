@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """Area and Perimeter"""
+
+
 class Rectangle:
     """
     This returns area and perimeter of a rectangle
