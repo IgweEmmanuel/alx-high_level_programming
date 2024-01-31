@@ -16,7 +16,6 @@ class Rectangle:
         self.height = height
         self.width = width
 
-
     @property
     def width(self):
         """width getter function"""
@@ -45,7 +44,6 @@ class Rectangle:
             raise ValueError("height must be >= 0")
         self.__height = value
 
-
     def area(self):
         """area of rectangle"""
         return(self.__height * self.__width)
@@ -64,5 +62,6 @@ class Rectangle:
         else:
             return '\n'.join(['#' * int(self.__width)
                              for _ in range(self.__height)])
+
     def __repr__(self):
         return f"Rectangle({self.__width}, {self.__height})"
