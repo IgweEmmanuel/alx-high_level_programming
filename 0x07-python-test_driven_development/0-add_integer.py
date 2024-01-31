@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 def add_integer(a, b=98):
-    """This function returns sum of a and b"""
+    """This function returns sum of a and b
+    Return: This programme returns integer
+    """
     
     if not isinstance(a, (int, float)):
         raise TypeError("a must be an integer")
