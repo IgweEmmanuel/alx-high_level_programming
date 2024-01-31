@@ -13,8 +13,8 @@ class Rectangle:
             height: this returns the height of the rectangle
         Returns: this returns the area, perimeter and string representtion
         """
-        self.height = height
-        self.width = width
+        self.__height = height
+        self.__width = width
 
     @property
     def width(self):
