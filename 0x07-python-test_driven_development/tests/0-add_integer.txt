@@ -14,6 +14,12 @@ Now use it:
     >>> add_integer(1, 2)
     3
 
+    >>> add_integer(100, -2)
+    98
+
+    >>> add_integer(2)
+    100
+    
     Checking for argument b
     >>> add_integer(100.3, -2)
     98
