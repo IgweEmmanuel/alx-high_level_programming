@@ -1,0 +1,35 @@
+
+The ``2-matrix_divided`` module
+===============================
+
+This ``matrix_divided`` is the function
+---------------------------------------
+
+This documention gives the details of codes and their exceptions of a function ``matrix_divided`` in the module ``2-matrix_divided``
+
+	Here, we import the function from the module
+	>>> matrix_divided = __import__("2-matrix_divided").matrix_divided
+
+	The following part of the code are data used to test the function and its expected behaviour and exceptions thrown
+	>>> matrix_divided([[1, 2, 3], [4, 5, 6]], 3)
+	[[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
+
+	>>> matrix_divided(4,5)
+	Traceback (most recent call last):
+	TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+	>>> matrix_divided([[1, 2], [4, 5, 6]], 3)
+	Traceback (most recent call last):
+	TypeError: Each row of the matrix must have the same size
+
+	>>> matrix_divided([], 2)
+	Traceback (most recent call last):
+	ValueError: matrix must not be empty
+
+	>>> matrix_divided([[1, 2, 3], [4, 5, 6]], 'a')
+	Traceback (most recent call last):
+	TypeError: div must be a number
+
+        >>> matrix_divided([[1, 2, 3], [4, 5, 6]], 0)
+        Traceback (most recent call last):
+        ZeroDivisionError: division by zero
