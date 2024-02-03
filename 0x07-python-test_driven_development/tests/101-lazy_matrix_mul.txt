@@ -1,0 +1,32 @@
+This is our module ``101-lazy_matrix_mul.py``
+============================================
+
+The function is ``lazy_matrix_mul``
+-----------------------------------
+
+>>> lazy_matrix_mul = __import__('101-lazy_matrix_mul').lazy_matrix_mul
+
+# Testing matrix multiplication with incompatible matrices
+>>> matrix_a = np.array([[1, 2], [3, 4]])
+>>> matrix_b = np.array([[5, 6, 7], [8, 9, 10]])
+>>> matrix_mul_numpy(matrix_a, matrix_b)
+Traceback (most recent call last):
+...
+ValueError: shapes (2,2) and (2,3) not aligned: 2 (dim 1) != 2 (dim 0)
+
+# Testing matrix multiplication with invalid input (m_a is not a NumPy array)
+>>> matrix_a = 5
+>>> matrix_b = np.array([[1, 2], [3, 4]])
+>>> matrix_mul_numpy(matrix_a, matrix_b)
+Traceback (most recent call last):
+...
+TypeError: m_a must be a NumPy array
+
+# Testing matrix multiplication with invalid input (m_b is not a NumPy array)
+>>> matrix_a = np.array([[1, 2], [3, 4]])
+>>> matrix_b = 5
+>>> matrix_mul_numpy(matrix_a, matrix_b)
+Traceback (most recent call last):
+...
+TypeError: m_b must be a NumPy array
+
