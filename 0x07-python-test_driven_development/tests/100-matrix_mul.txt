@@ -1,0 +1,62 @@
+This is documentation for ``100-matrix_mul`` module
+===================================================
+
+The funciton is ``matrix_mul``
+------------------------------
+
+In this documentation, ``matrix_mul`` is imported from ``100-matrix_mul`` file as thus:
+
+	>>> matrix_mul = __import__("100-matrix_mul").matrix_mul
+
+	# Testing matrix multiplication with valid input
+	>>> matrix_a = [[1, 2, 3], [4, 5, 6]]
+	>>> matrix_b = [[7, 8], [9, 10], [11, 12]]
+	>>> matrix_mul(matrix_a, matrix_b)
+	[[58, 64], [139, 154]]
+
+	# Testing matrix multiplication with valid input (floating-point numbers)
+	>>> matrix_a = [[1.5, 2.5], [3.5, 4.5]]
+	>>> matrix_b = [[5.5, 6.5], [7.5, 8.5]]
+	>>> matrix_mul(matrix_a, matrix_b)
+	[[27.5, 31.25], [61.25, 69.75]]
+
+	# Testing matrix multiplication with empty matrix
+	>>> matrix_a = [[]]
+	>>> matrix_b = [[1]]
+	>>> matrix_mul(matrix_a, matrix_b)
+	Traceback (most recent call last):
+	...
+	ValueError: m_a can't be empty
+
+	# Testing matrix multiplication with incompatible matrices
+	>>> matrix_a = [[1, 2], [3, 4]]
+	>>> matrix_b = [[5, 6, 7], [8, 9, 10]]
+	>>> matrix_mul(matrix_a, matrix_b)
+	Traceback (most recent call last):
+	...
+	ValueError: m_a and m_b can't be multiplied
+
+	# Testing matrix multiplication with non-numeric elements
+	>>> matrix_a = [['a', 'b'], ['c', 'd']]
+	>>> matrix_b = [[1, 2], [3, 4]]
+	>>> matrix_mul(matrix_a, matrix_b)
+	Traceback (most recent call last):
+	...
+	TypeError: m_a should contain only integers or floats
+
+	# Testing matrix multiplication with invalid input (m_a is not a list)
+	>>> matrix_a = 5
+	>>> matrix_b = [[1, 2], [3, 4]]
+	>>> matrix_mul(matrix_a, matrix_b)
+	Traceback (most recent call last):
+	...
+	TypeError: m_a must be a list
+
+	# Testing matrix multiplication with invalid input (m_b is not a list of lists)
+	>>> matrix_a = [[1, 2], [3, 4]]
+	>>> matrix_b = 5
+	>>> matrix_mul(matrix_a, matrix_b)
+	Traceback (most recent call last):
+	...
+	TypeError: m_b must be a list of lists
+
