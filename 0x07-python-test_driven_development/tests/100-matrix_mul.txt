@@ -7,6 +7,7 @@ The funciton is ``matrix_mul``
 In this documentation, ``matrix_mul`` is imported from ``100-matrix_mul`` file as thus:
 
 	>>> matrix_mul = __import__("100-matrix_mul").matrix_mul
+	[[58, 64], [139, 154]]
 
 	# Testing matrix multiplication with valid input
 	>>> matrix_a = [[1, 2, 3], [4, 5, 6]]
@@ -18,7 +19,7 @@ In this documentation, ``matrix_mul`` is imported from ``100-matrix_mul`` file a
 	>>> matrix_a = [[1.5, 2.5], [3.5, 4.5]]
 	>>> matrix_b = [[5.5, 6.5], [7.5, 8.5]]
 	>>> matrix_mul(matrix_a, matrix_b)
-	[[27.5, 31.25], [61.25, 69.75]]
+	[[27.0, 31.0], [53.0, 61.0]]
 
 	# Testing matrix multiplication with empty matrix
 	>>> matrix_a = [[]]
@@ -32,9 +33,7 @@ In this documentation, ``matrix_mul`` is imported from ``100-matrix_mul`` file a
 	>>> matrix_a = [[1, 2], [3, 4]]
 	>>> matrix_b = [[5, 6, 7], [8, 9, 10]]
 	>>> matrix_mul(matrix_a, matrix_b)
-	Traceback (most recent call last):
-	...
-	ValueError: m_a and m_b can't be multiplied
+	[[21, 24, 27], [47, 54, 61]]
 
 	# Testing matrix multiplication with non-numeric elements
 	>>> matrix_a = [['a', 'b'], ['c', 'd']]
@@ -58,5 +57,5 @@ In this documentation, ``matrix_mul`` is imported from ``100-matrix_mul`` file a
 	>>> matrix_mul(matrix_a, matrix_b)
 	Traceback (most recent call last):
 	...
-	TypeError: m_b must be a list of lists
+	TypeError: m_b must be a list
 
