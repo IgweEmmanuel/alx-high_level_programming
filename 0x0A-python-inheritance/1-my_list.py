@@ -13,5 +13,6 @@ class MyList(list):
             self: this is the instance of the object
         Return: this returns the sorted list
         """
-        sorted_list = sorted(self)
+        sorted_list = self.copy()
+        sorted_list.sort()
         print(sorted_list)
