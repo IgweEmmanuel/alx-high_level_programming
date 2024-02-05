@@ -6,7 +6,7 @@ class BaseGeometry:
     """
     BaseGeometry
     """
-    
+
     def area(self):
         """raises exception on areas
         Args:
