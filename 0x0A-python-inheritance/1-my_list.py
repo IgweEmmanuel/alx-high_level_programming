@@ -14,8 +14,8 @@ class MyList(list):
         Return: this returns the sorted list
         """
         if all(isinstance(items, int) for items in self):
-                sorted_list = self.copy()
-                sorted_list.sort()
-                print(sorted_list)
+            sorted_list = self.copy()
+            sorted_list.sort()
+            print(sorted_list)
         else:
             raise TypeError("list items should be int")

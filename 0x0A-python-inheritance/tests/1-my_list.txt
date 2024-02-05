@@ -20,3 +20,7 @@ The class is ``MyList``
 
 	>>> print(my_list)
 	[1, 4, 2, 3, 5]
+
+	>>> if not type(my_list) is int
+	Traceback (most recent call last):
+	TypeError: list items must be int
