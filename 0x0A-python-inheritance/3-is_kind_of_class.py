@@ -3,6 +3,6 @@
 
 
 def is_same_class(obj, a_class):
-    """This returns instance type of a_class if same
+    """Function returns instance of class
     """
-    return type(obj) is a_class
+    return isinstance(obj, a_class)
