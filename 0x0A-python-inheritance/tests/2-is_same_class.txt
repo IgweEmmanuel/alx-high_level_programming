@@ -1,0 +1,16 @@
+The module  this doc  ``1-my_list``
+============================================
+
+The ``MyList``
+-----------------------
+
+	>>> is_same_class = __import__('2-is_same_class').is_same_class
+	...
+	>>> is_same_class(1, int.__name__)
+        True
+
+        >>> is_same_class(1, float.__name__)
+        False
+
+        >>> is_same_class(1, object.__name__)
+        False
