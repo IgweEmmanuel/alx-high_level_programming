@@ -1,8 +1,13 @@
 #!/usr/bin/python3
-"""Checks if an object is an instance of a class"""
+"""Is same class checker"""
 
 
 def is_same_class(obj, a_class):
-    """This returns instance type of a_class if same
+    """The function that checks for types
+    Args:
+        obj: this is the object
+        a_class: this is the class
+    Return: this returns type match
     """
     return type(obj) is a_class
+
