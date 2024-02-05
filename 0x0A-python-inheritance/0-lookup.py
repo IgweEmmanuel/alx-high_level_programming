@@ -4,5 +4,4 @@
 
 def lookup(obj):
     """This is the method that returns teh list of available attrubutes and methods"""
-    super().__init()
-
+    return [attr for attr in dir(obj) if callable(getattr(obj, attr)) or not attr.startswith("__")]
