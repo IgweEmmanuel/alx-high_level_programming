@@ -21,6 +21,9 @@ The class is ``MyList``
 	>>> print(my_list)
 	[1, 4, 2, 3, 5]
 
-	>>> if not type(my_list) is int
-	Traceback (most recent call last):
-	TypeError: list items must be int
+	>>> my_list = MyList()
+	>>> my_list.append('a')
+	>>> my_list.append('6')
+	>>> my_list.append('t')
+	>>> print(my_list)
+	['a', '6', 't']
