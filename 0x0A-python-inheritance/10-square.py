@@ -62,8 +62,3 @@ class Square(Rectangle):
 
     def __init__(self, size):
         super().__init__(size, size)
-
-    def __str__(self):
-        """string
-        """
-        return f"[Square] {self._Rectangle__width}"
