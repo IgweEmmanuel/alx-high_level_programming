@@ -55,6 +55,7 @@ class Rectangle(BaseGeometry):
         """string implementation"""
         return f"[Rectangle] {self.__width}/{self.__height}"
 
+
 class Square(Rectangle):
     """
     square class
