@@ -23,7 +23,7 @@ class BaseGeometry:
             value: integer value
         Return: value
         """
-        self.name = str
+        self.name = str(name)
         if not type(value) is int:
             raise TypeError(name + " must be an integer")
         if value <= 0:
