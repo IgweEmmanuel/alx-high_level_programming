@@ -6,7 +6,7 @@ class MyInt(int):
     """class that inherits int class"""
 
     def __eq__(self, value):
-        """equal to 
+        """equal to
         Args:
             self: instantiator
             value: the sign ==
