@@ -7,14 +7,6 @@ class BaseGeometry:
     Class geometry
     """
 
-    def area(self):
-        """area
-        Args:
-            self: the object method
-        Return: exception
-        """
-        raise Exception("area() is not implemented")
-
     def integer_validator(self, name, value):
         """integer validator
         Args:
