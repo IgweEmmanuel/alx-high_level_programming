@@ -9,9 +9,7 @@ def write_file(filename="", text=""):
         text: text to fill file with
     Return: the writen file
     """
-    with open(filename, 'r', encoding='utf-8') as myFile:
-        if not myFile:
-            myFile.read()
-        else:
-            myFile.write(text)
-
+    count = 0
+    with open(filename, 'w', encoding='utf-8') as myFile:
+        myFile.write(text)
+        return len(text)
