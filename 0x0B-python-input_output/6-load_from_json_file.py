@@ -9,5 +9,4 @@ def load_from_json_file(filename):
         my_obj: the text object (string)
     Return: the serialized file
     """
-    with open(filename, 'w', encoding='utf-8') as myFile:
-        return json.loads(myFile)
+    return json.loads(filename)
