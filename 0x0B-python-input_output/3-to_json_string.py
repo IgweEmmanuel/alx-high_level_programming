@@ -2,6 +2,7 @@
 """Python write into file"""
 import json
 
+
 def to_json_string(my_obj):
     """json representation of a file
     Args:
