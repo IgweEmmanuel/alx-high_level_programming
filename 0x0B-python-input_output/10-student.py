@@ -13,7 +13,7 @@ class Student:
 
     def to_json(self, attr=None):
         """Initialize an empty dictionary to store the JSON representation"""
-        if not attr or not isinstance(attr, list):
+        if not isinstance(attr, list):
             return self.__dict__
 
         json_dict = {}
