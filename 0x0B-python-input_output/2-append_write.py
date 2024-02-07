@@ -9,6 +9,6 @@ def append_write(filename="", text=""):
         text: text to fill file with
     Return: the writen file
     """
-    with open(filename, 'w', encoding='utf-8') as myFile:
+    with open(filename, 'a', encoding='utf-8') as myFile:
         myFile.write(text)
         return len(text)
