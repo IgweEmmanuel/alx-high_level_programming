@@ -9,5 +9,6 @@ def read_file(filename=""):
     Return: the content of the file
     """
     with open(filename,'r', encoding="utf-8") as myFile:
-        myFile.read()
+        for line in myFile:
+            print(line)
         
