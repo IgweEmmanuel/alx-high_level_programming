@@ -29,8 +29,8 @@ class TestSquare(unittest.TestCase):
         square.update(10, 20, 30, 40)
         self.assertEqual(square.id, 10)
         self.assertEqual(square.x, 20)
-        self.assertEqual(square.y, 30)
-        self.assertEqual(square.size, 40)
+        self.assertEqual(square.size, 30)
+        self.assertEqual(square.y, 40)
 
     def test_str(self):
         square = Square(5, 2, 3, 4)
