@@ -68,6 +68,15 @@ class Rectangle(Base):
             raise ValueError("y must be >= 0")
         self.__y = y
 
+    def to_dictionary(self):
+        return {
+                'x': self.x,
+                'y': self.y,
+                'id': self.id,
+                'height': self.height,
+                'width': self.width,
+        }
+
     def area(self):
         return self.width * self.height
 

@@ -23,5 +23,20 @@ class Square(Rectangle):
         self.width = size
         self.height = size
 
+    def to_dictionary(self):
+        return {
+            'id': self.id,
+            'x': self.x,
+            'size': self.size,
+            'y': self.y,
+        }
+
+    def update(self, *args, **kwargs):
+        if args:
+            super().update(*args)
+            return
+        for key, value in kwargs.items():
+            setattr(self, key, value)
+        
     def __str__(self):
-        return f"[Square] ({self.id}) {self.x}/{self.y} - {self.width}"
+        return f"[Square] ({self.id}) {self.x}/{self.y} - {self.size}"
