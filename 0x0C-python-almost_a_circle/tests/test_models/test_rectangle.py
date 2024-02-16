@@ -32,7 +32,7 @@ class TestRectangle(unittest.TestCase):
         with self.assertRaises(TypeError) as e:
             Rectangle.__init__()
         msg = "__init__() missing 1 required positional argument: 'self'"
-        self.assertEqual(str(e.excepton), msg)
+        self.assertEqual(str(e.exception), msg)
 
     def test_init(self):
         rectangle = Rectangle(5, 10, 2, 3, 4)
