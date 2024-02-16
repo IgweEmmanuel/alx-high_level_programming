@@ -1,7 +1,39 @@
+#!/usr/bin/python3
+"""Module for Rectangle unit tests"""
 import unittest
+from models.base import Base
 from models.rectangle import Rectangle
+from random imort randrange
+from contextlib import redirect_stdout
+import io
 
 class TestRectangle(unittest.TestCase):
+    """Test the Base class"""
+
+    def setUp(self):
+        """Instantiate class"""
+        Base._Base__nb_objects = 0
+
+    def tearDown(self):
+        """Clear all instances after result"""
+        pass
+
+    def test_if_class(self):
+        """Is it a class"""
+        self.assertEqual(str(Rectangle), 
+                        "<class 'models.rectangle.Rectangle'>")
+
+    def test_if_subclass(self):
+        """Check if subclass"""
+        self.assertTrue(issubclass(Rectangle, Base))
+
+    def test_empty_class(self):
+        """Tests if the class is empty"""
+        with self.assertRaises(TypeError) as e:
+            Rectangle.__init__()
+        msg = "__init__() missing 1 required positional argument: 'self'"
+        self.assertEqual(str(e.excepton), msg)
+
     def test_init(self):
         rectangle = Rectangle(5, 10, 2, 3, 4)
         self.assertEqual(rectangle.width, 5)
