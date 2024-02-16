@@ -1,5 +1,10 @@
+#!/usr/bin/python3
+"""MOdule for Square unit tests."""
 import unittest
 from models.base import Base
+from models.rectangle import Rectangle
+from models.square import Square
+
 
 class TestBase(unittest.TestCase):
     def test_to_json_string_empty_list(self):
