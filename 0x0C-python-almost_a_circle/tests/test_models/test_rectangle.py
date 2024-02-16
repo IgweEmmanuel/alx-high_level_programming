@@ -31,7 +31,7 @@ class TestRectangle(unittest.TestCase):
         """Tests if the class is empty"""
         with self.assertRaises(TypeError) as e:
             Rectangle.__init__()
-        msg = "__init__() missing 1 required positional argument: 'self'"
+        msg = "__init__() missing 3 required positional arguments: 'self', 'width', and 'height'"
         self.assertEqual(str(e.exception), msg)
 
     def test_init(self):
