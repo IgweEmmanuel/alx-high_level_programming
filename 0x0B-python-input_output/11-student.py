@@ -1,3 +1,4 @@
+
 #!/usr/bin/python3
 """returns dictionary description"""
 
@@ -11,10 +12,10 @@ class Student:
         self.last_name = last_name
         self.age = age
 
-    def to_json(self, attr=None):
+    def to_json(self, attrs=None):
         """Initialize an empty dictionary to store the JSON representation"""
         if isinstance(attrs, list) and all(isinstance(attr, str) for attr in attrs):
-            return {attr: getattr(self, attr)}
+            return {attr: getattr(self, attr) for attr in attrs if hasattr(self, attr)}
         else:
             return self.__dict__
     
