@@ -1,4 +1,3 @@
-
 #!/usr/bin/python3
 """returns dictionary description"""
 
@@ -14,11 +13,13 @@ class Student:
 
     def to_json(self, attrs=None):
         """Initialize an empty dictionary to store the JSON representation"""
-        if isinstance(attrs, list) and all(isinstance(attr, str) for attr in attrs):
-            return {attr: getattr(self, attr) for attr in attrs if hasattr(self, attr)}
+        a = all(isinstance(attr, str) for attr in attrs)
+        if isinstance(attrs, list) and a:
+            b = for attr in attrs if hasattr(self, attr)
+            return {attr: getattr(self, attr) b}
         else:
             return self.__dict__
-    
+
     def reload_from_json(self, json):
         """reload from json
         Args:
