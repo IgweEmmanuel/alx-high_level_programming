@@ -18,13 +18,5 @@ def matrix_mul_numpy(m_a, m_b):
     Returns:
         numpy.ndarray: The resulting matrix after multiplication.
     """
-    result = np.dot(m_a, m_b)
+    result = np.matmul(m_a, m_b)
     return result
-
-# Example usage:
-matrix_a = np.array([[1, 2, 3], [4, 5, 6]])
-matrix_b = np.array([[7, 8], [9, 10], [11, 12]])
-
-result_matrix = matrix_mul_numpy(matrix_a, matrix_b)
-print(result_matrix)
-
