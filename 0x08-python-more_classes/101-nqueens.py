@@ -1,39 +1,32 @@
 #!/usr/bin/python3
+"""queen chess gaem"""
 import sys
 
 def print_solution(board):
-    for row in board:
-        print(" ".join(row))
+    N = len(board)
+    for row in range(N):
+        print("[{}, {}]".format(row, board[row]))
 
 def is_safe(board, row, col, N):
     # Check if there is a queen in the same column
     for i in range(row):
-        if board[i][col] == 'Q':
+        if board[i] == col or \
+           board[i] - i == col - row or \
+           board[i] + i == col + row:
             return False
-
-    # Check upper left diagonal
-    for i, j in zip(range(row, -1, -1), range(col, -1, -1)):
-        if board[i][j] == 'Q':
-            return False
-
-    # Check upper right diagonal
-    for i, j in zip(range(row, -1, -1), range(col, N)):
-        if board[i][j] == 'Q':
-            return False
-
     return True
 
 def solve_nqueens(board, row, N):
     if row == N:
         print_solution(board)
-        print()  # Empty line between solutions
+        print()
         return
 
     for col in range(N):
         if is_safe(board, row, col, N):
-            board[row][col] = 'Q'
+            board[row] = col
             solve_nqueens(board, row + 1, N)
-            board[row][col] = '.'  # Backtrack
+            board[row] = -1  # Backtrack
 
 def nqueens(N):
     try:
@@ -46,12 +39,13 @@ def nqueens(N):
         print("N must be at least 4")
         sys.exit(1)
 
-    board = [['.' for _ in range(N)] for _ in range(N)]
+    board = [-1] * N
     solve_nqueens(board, 0, N)
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
-        print("Usage: nqueens N")
+        print("Usage: {} N".format(sys.argv[0]))
         sys.exit(1)
     
     nqueens(sys.argv[1])
+
