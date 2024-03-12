@@ -17,12 +17,3 @@ class Student:
             return {attr: getattr(self, attr) for attr in attrs if hasattr(self, attr)}
         else:
             return self.__dict__
-
-    def reload_from_json(self, json):
-        """reload from json
-        Args:
-            self: instance of object
-            json: hson file
-        """
-        for key, value in json.items():
-            setattr(self, key, value)
