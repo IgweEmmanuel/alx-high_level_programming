@@ -1,2 +1,2 @@
 -- Print full description of first_table
-SELECT * FROM first_talbe;
+SELECT * FROM first_table;
