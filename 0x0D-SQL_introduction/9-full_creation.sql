@@ -1,0 +1,9 @@
+-- Create table and insert values in it
+CREATE TABLE IF NOT EXISTS `second_table`(
+	`id` INT,
+	`name` VARCHAR(256),
+	`score` INT
+);
+
+-- This inserts values into the created table
+INSERT INTO `second_table` (`id`,`name`,`score`) VALUES (1, 'name', 10), (2, 'Alex', 3), (3, 'Bob', 14), (4, 'George', 8);
