@@ -2,8 +2,6 @@
 
 const dict = require('./101-data').dict;
 
-console.log('Initial dictionary:', dict);
-
 const invertedDict = {};
 
 for (const userId in dict) {
@@ -14,4 +12,4 @@ for (const userId in dict) {
     invertedDict[occurrence].push(userId);
 }
 
-console.log('New dictionary:', invertedDict);
+console.log(invertedDict);
