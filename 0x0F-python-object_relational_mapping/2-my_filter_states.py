@@ -25,7 +25,7 @@ if __name__ == '__main__':
                 FROM
                     states
                 WHERE
-                    name LIKE BINARY {}
+                    name LIKE BINARY '{}'
                 ORDER BY
                     states.id ASC
                 """.format(argv[4]))
