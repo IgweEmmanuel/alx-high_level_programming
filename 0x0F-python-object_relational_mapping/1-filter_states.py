@@ -33,6 +33,3 @@ states = cursor.fetchall()
 
 for state in states:
     print(state)
-
-cursor.close()
-db.close()
