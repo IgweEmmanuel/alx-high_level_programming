@@ -12,10 +12,6 @@ if __name__ == '__main__':
     This is the filtering section
     of the code
     """
-    if len(argv) != 4:
-    print('You should use this format:
-            {}, user, password, database', format(argv[0]))
-    sys.exit(1)
     username = argv[1]
     password = argv[2]
     database = argv[3]
