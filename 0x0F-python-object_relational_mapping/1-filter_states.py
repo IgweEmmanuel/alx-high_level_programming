@@ -25,7 +25,7 @@ db = MySQLdb.connect(host='localhost',
                     user=username, port=3306,
                     passwd=password, db=database)
 
-cursor = db.cursor
+cursor = db.cursor()
 
 cursor.execute("SELECT * FROM states WHERE name LIKE 'N%'")
 
@@ -33,3 +33,6 @@ states = cursor.fetchall()
 
 for state in states:
     print(state)
+
+cursor.close()
+db.close()
