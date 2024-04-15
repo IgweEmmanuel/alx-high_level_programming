@@ -16,23 +16,22 @@ if __name__ == '__main__':
     print('You should use this format:
             {}, user, password, database', format(argv[0]))
     sys.exit(1)
+    username = argv[1]
+    password = argv[2]
+    database = argv[3]
 
-username = argv[1]
-password = argv[2]
-database = argv[3]
-
-db = MySQLdb.connect(host='localhost',
+    db = MySQLdb.connect(host='localhost',
                     user=username, port=3306,
                     passwd=password, db=database)
 
-cursor = db.cursor()
+    cursor = db.cursor()
 
-cursor.execute("SELECT * FROM states WHERE name LIKE 'N%'")
+    cursor.execute("SELECT * FROM states WHERE name LIKE 'N%'")
 
-states = cursor.fetchall()
+    states = cursor.fetchall()
 
-for state in states:
-    print(state)
+    for state in states:
+        print(state)
 
-cursor.close()
-db.close()
+    cursor.close()
+    db.close()
