@@ -22,7 +22,7 @@ password = argv[2]
 database = argv[3]
 
 db = MySQLdb.connect(host='localhost',
-                    port=3306, user=username,
+                    user=username, port=3306,
                     passwd=password, db=database)
 
 cursor = db.cursor
