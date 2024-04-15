@@ -1,8 +1,16 @@
 #!/usr/bin/python3
+"""
+This script get all states from
+the database 
+"""
 import MySQLdb
 import sys
 
 if __name__ == '__main__':
+    """
+    This side of the script accesses
+    the database and gets the states
+    """
 
     db = MySQLdb.connect(
                         host='localhost',
