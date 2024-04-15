@@ -15,7 +15,6 @@ if __name__ == '__main__':
     username = argv[1]
     password = argv[2]
     database = argv[3]
-    statename = argv[4] 
 
     db = MySQLdb.connect(
                         host='localhost',
@@ -27,7 +26,7 @@ if __name__ == '__main__':
 
     cursor.execute("SELECT * FROM states\
                     WHERE name LIKE BINARY %(name)s\
-                    ORDER BY states.id ASC", {'name':statename})
+                    ORDER BY states.id ASC", {'name':argv[4]})
 
     states = cursor.fetchall()
 
