@@ -21,7 +21,7 @@ if __name__ == '__main__':
                         host='localhost',
                         user=username, port=3306,
                         passwd=password,
-                        db=database, name=statename)
+                        db=database)
 
     cursor = db.cursor()
 
