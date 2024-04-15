@@ -22,17 +22,16 @@ if __name__ == '__main__':
                         passwd=password,
                         db=database)
 
-    cursor = db.cursor()
-
-    cursor.execute("SELECT * FROM states\
+    with db.cursor() as cursor:
+        cursor.execute("SELECT * FROM states\
                     WHERE name LIKE BINARY %(name)s\
                     ORDER BY states.id ASC", {'name':argv[4]})
 
-    states = cursor.fetchall()
+        states = cursor.fetchall()
 
-    if states is not None:
-        for state in states:
-            print(state)
+        if states is not None:
+            for state in states:
+                print(state)
 
-    cursor.close()
-    db.close()
+        cursor.close()
+        db.close()
