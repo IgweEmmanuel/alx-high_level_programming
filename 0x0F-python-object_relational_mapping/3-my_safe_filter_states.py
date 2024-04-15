@@ -23,10 +23,10 @@ if __name__ == '__main__':
             FROM
                 states
             WHERE
-                name LIKE BINARY %s
+                name LIKE BINARY %(name)s
             ORDER BY
                 states.id ASC
-        """, (argv[4],))
+        """, {'name':argv[4]})
 
         rows = cur.fetchall()
 
