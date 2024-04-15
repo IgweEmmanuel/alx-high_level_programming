@@ -1,10 +1,13 @@
 #!/usr/bin/python3
+
+if __name__ == '__main__':
 import MySQLdb
 import sys
 
 if len(sys.argv) != 4:
     print('You should use this format: {}, user, password, database', format(sys.argv[0]))
     sys.exit(1)
+
 username = sys.argv[1]
 password = sys.argv[2]
 database = sys.argv[3]
