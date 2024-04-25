@@ -1,4 +1,4 @@
 #!/bin/bash
 #http status code
-curl -sL $1
+curl -sL "$1"
 
