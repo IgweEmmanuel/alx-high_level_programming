@@ -6,3 +6,7 @@ import urllib.request
 req = urllib.request.Request('https://alx-intranet.hbtn.io/status')
 with urllib.request.urlopen(req) as response:
     output = response.read()
+    utf8 = output.decode('utf-8')
+print('Body response:')
+print('\t - content:', type(output))
+print('\t - utf8 content:', utf8)
