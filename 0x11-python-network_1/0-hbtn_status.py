@@ -2,7 +2,7 @@
 # Request to a server using urllib
 
 
-import urllib.request
+import urllib
 
 
 url = "https://alx-intranet.hbtn.io/status"
