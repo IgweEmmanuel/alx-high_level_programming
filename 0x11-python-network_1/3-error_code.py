@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-"""Request to URL and displays the response body"""
+"""Request to URL and displays the response body
+Usage: './url'
+"""
 import sys
 import urllib.error
 import urllib.request
