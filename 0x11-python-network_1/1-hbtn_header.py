@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Gets X-Request-I"""d
+"""Gets X-Request-I"""
 import urllib.request
 import sys
 
