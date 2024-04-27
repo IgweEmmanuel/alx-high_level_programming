@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """Request to a server using urllib"""
-import urllib
+import urllib.request
 
 
 if __name__ == '__main__':
