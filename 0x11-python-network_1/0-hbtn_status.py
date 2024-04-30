@@ -4,6 +4,7 @@ import urllib.request
 
 
 if __name__ == "__main__":
+    """This prints reads the url response using with"""
     url = "https://alx-intranet.hbtn.io/status"
     with urllib.request.urlopen(url) as response:
         output = response.read()
