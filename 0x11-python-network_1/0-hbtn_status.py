@@ -1,14 +1,16 @@
 #!/usr/bin/python3
 """Request to a server using urllib"""
-import urllib
+import urllib.request
 
+url = 'https://alx-intranet.hbtn.io/status'
 
-if __name__ == "__main__":
-    #url = urllib.request.Request("https://alx-intranet.hbtn.io/status")
+try:
     with urllib.request.urlopen(url) as response:
-        output = response.read()
-        utf8 = output.decode('utf-8')
-        print("Body response:")
-        print("\t- type: {}".format(type(output)))
-        print("\t- content {}".format(output))
-        print("\t- utf8 content: {}".format(utf8))
+        html = response.read().decode('utf-8')
+        print("- Body response:")
+        print("\t- type:", type(html))
+        print("\t- content:", html)
+except urllib.error.HTTPError as e:
+    print("Error:", e.code)
+except urllib.error.URLError as e:
+    print("Error:", e.reason)
