@@ -2,7 +2,7 @@
 """Request to a server using urllib"""
 import urllib.request
 
-url = 'https://alx-intranet.hbtn.io/status'
+url = urllib.request.Request('https://alx-intranet.hbtn.io/status')
 
 try:
     with urllib.request.urlopen(url) as response:
