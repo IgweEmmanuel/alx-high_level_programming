@@ -5,8 +5,8 @@
       url: urlLink,
       dataType: 'json',
       success: function (data) {
-        const results = data.result;
-        results.forEach(function (titles) {
+        const result = data.results;
+        result.forEach(function (titles) {
           $('#list_movies').append('<li>' + titles.title + '</li>');
         });
       },
